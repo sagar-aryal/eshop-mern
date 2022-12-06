@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Logo from "../../components/logo/Logo";
 import AllCategories from "../../components/allCategories/AllCategories";
 import SearchBar from "../../components/searchBar/SearchBar";
@@ -7,17 +9,24 @@ import { FaHeart, FaUserAlt, FaCartPlus } from "react-icons/fa";
 const MainHeader = () => {
   return (
     <div className="main-header">
-      <div className="logo">
+      <Link to="/" className="logo">
         <Logo />
-      </div>
+      </Link>
+
       <div className="center">
         <AllCategories />
         <SearchBar />
       </div>
       <div className="left">
-        <FaHeart />
-        <FaCartPlus />
-        <FaUserAlt />
+        <Link to="wishlist">
+          <FaHeart />
+        </Link>
+        <Link to="cart">
+          <FaCartPlus />
+        </Link>
+        <Link to="account">
+          <FaUserAlt />
+        </Link>
       </div>
     </div>
   );

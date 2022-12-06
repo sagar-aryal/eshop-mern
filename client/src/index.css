@@ -30,6 +30,9 @@ a {
 img {
   width: 100%;
 }
+.active {
+  border-bottom: 3px solid rgb(78, 211, 68);
+}
 
 /* Header Section CSS */
 .header {
