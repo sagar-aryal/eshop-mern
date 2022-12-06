@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* CSS RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Header Section CSS */
+.header {
+  padding: 0 24px;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid gray;
+}
+
+.main-header .logo {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.main-header .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(219, 214, 214);
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+.main-header .left {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.search-box {
+  margin-left: 10px;
+}
+
+.categories select {
+  padding: 0 4px;
+}
+.search-box input,
+.categories select {
+  color: rgb(68, 66, 66);
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+
+.search-box input {
+  border-left: 1px solid gray;
+  padding-left: 10px;
+}
+
+.search-box input::placeholder {
+  color: rgb(68, 66, 66);
+}
+
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid gray;
+}
+
+nav {
+  flex: 1;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+nav ul li {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.social-media-icons {
+  display: flex;
+  gap: 8px;
+}
+.social-media-icons li {
+  font-size: 14px;
+  color: rgb(68, 66, 66);
+}
+
+.openingInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-left: 1px solid gray;
+  padding: 0 10px;
+  margin-left: 20px;
+}
+
+.openingInfo .info span {
+  font-size: 14px;
+}
+
+.openingInfo .info p {
+  font-size: 7px;
+}
