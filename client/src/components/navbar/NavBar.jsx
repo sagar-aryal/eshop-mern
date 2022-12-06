@@ -1,57 +1,47 @@
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
+  const menu = [
+    {
+      id: 1,
+      path: "/",
+      name: "Home",
+    },
+    {
+      id: 2,
+      path: "/about",
+      name: "About",
+    },
+    {
+      id: 3,
+      path: "/shop",
+      name: "Shop",
+    },
+    {
+      id: 4,
+      path: "/ourteam",
+      name: "Our Team",
+    },
+    {
+      id: 5,
+      path: "/contact",
+      name: "Contact",
+    },
+  ];
+
   return (
     <nav>
       <ul>
-        <li>
-          <NavLink
-            to="/"
-            className={({ isActive }) => (isActive ? "active" : " ")}
-          >
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/about"
-            className={({ isActive }) => (isActive ? "active" : " ")}
-          >
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/shop"
-            className={({ isActive }) => (isActive ? "active" : " ")}
-          >
-            Shop
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/blog"
-            className={({ isActive }) => (isActive ? "active" : " ")}
-          >
-            Blog
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/ourteam"
-            className={({ isActive }) => (isActive ? "active" : " ")}
-          >
-            Our team
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) => (isActive ? "active" : " ")}
-          >
-            Contact
-          </NavLink>
-        </li>
+        {menu.map((item) => (
+          <li key={item.id}>
+            <NavLink
+              to={item.path}
+              className={({ isActive }) => (isActive ? "active" : " ")}
+            >
+              {item.name}
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </nav>
   );
