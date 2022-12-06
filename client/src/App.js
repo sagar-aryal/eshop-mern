@@ -13,20 +13,22 @@ import Account from "./pages/account/Account";
 
 const App = () => {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/ourteam" element={<OurTeam />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/wishlist" element={<WishList />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/account" element={<Account />} />
-      </Routes>
-    </Router>
+    <div className="container">
+      <Router>
+        <Header />
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/ourteam" element={<OurTeam />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/wishlist" element={<WishList />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/account" element={<Account />} />
+        </Routes>
+      </Router>
+    </div>
   );
 };
 

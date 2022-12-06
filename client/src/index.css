@@ -30,14 +30,17 @@ a {
 img {
   width: 100%;
 }
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 24px;
+}
 .active {
   border-bottom: 3px solid rgb(78, 211, 68);
 }
 
 /* Header Section CSS */
-.header {
-  padding: 0 24px;
-}
 
 .main-header {
   display: flex;
