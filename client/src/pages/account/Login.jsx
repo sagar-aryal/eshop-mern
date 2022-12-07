@@ -3,9 +3,29 @@ import { Link } from "react-router-dom";
 
 import { FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
+
+const initialInputValues = {
+  email: "",
+  password: "",
+};
 
 const Login = () => {
+  const [inputValues, setInputValues] = useState(initialInputValues);
   const [passwordShown, setPasswordShown] = useState(false);
+
+  const handleChange = (event) => {
+    setInputValues((prev) => {
+      return { ...prev, [event.target.name]: event.target.value };
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(inputValues);
+    toast.success("Loggin Successfully");
+    setInputValues(initialInputValues);
+  };
 
   // Password toggle handler
   const togglePassword = () => {
@@ -16,12 +36,14 @@ const Login = () => {
     <div className="form-container">
       <div className="form-content">
         <h1>Login</h1>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="input-field">
             <input
-              type="text"
+              type="email"
               name="email"
               placeholder="Email"
+              value={inputValues.name}
+              onChange={handleChange}
               autoComplete="off"
               required
               autoFocus
@@ -32,6 +54,8 @@ const Login = () => {
               type={passwordShown ? "text" : "password"}
               name="password"
               placeholder="Password"
+              value={inputValues.name}
+              onChange={handleChange}
               required
             />
             <FaEyeSlash
@@ -50,7 +74,7 @@ const Login = () => {
             <Link>Forget pasword?</Link>
           </div>
           <div className="btn-field">
-            <button>Login</button>
+            <button type="submit">Login</button>
           </div>
           <div className="form-link">
             <span>

@@ -243,7 +243,6 @@ nav ul li {
 }
 
 .google-login button {
-  background: red;
   display: flex;
   align-items: center;
   justify-content: center;

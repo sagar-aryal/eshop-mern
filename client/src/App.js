@@ -12,6 +12,9 @@ import Cart from "./pages/cart/Cart";
 import Login from "./pages/account/Login";
 import Register from "./pages/account/Register";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const App = () => {
   return (
     <div className="container">
@@ -30,6 +33,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
         </Routes>
       </Router>
+      <ToastContainer />
     </div>
   );
 };
