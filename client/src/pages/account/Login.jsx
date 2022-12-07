@@ -23,7 +23,7 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(inputValues);
-    toast.success("Loggin Successfully");
+    toast.success("Logged in Successfully");
     setInputValues(initialInputValues);
   };
 
