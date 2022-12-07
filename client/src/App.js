@@ -9,7 +9,8 @@ import OurTeam from "./pages/ourTeam/OurTeam";
 import Contact from "./pages/contact/Contact";
 import WishList from "./pages/wishList/WishList";
 import Cart from "./pages/cart/Cart";
-import Account from "./pages/account/Account";
+import Login from "./pages/account/Login";
+import Register from "./pages/account/Register";
 
 const App = () => {
   return (
@@ -25,7 +26,8 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/wishlist" element={<WishList />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/account" element={<Account />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </Router>
     </div>

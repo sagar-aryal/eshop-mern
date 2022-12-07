@@ -42,6 +42,9 @@ img {
 }
 
 /* Header Section CSS */
+.header {
+  margin-bottom: 30px;
+}
 
 .main-header {
   display: flex;
@@ -142,4 +145,61 @@ nav ul li {
 
 .openingInfo .info p {
   font-size: 7px;
+}
+
+/* Login and Register Form */
+
+.form-container {
+  max-width: 480px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-content {
+  border: 1px solid rgb(219, 214, 214);
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.form-content h1 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-content form {
+  margin-top: 30px;
+}
+
+.form-content form .input-field,
+.form-content form .btn-field {
+  height: 45px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+.form-content form input,
+.form-content form button {
+  height: 100%;
+  width: 100%;
+}
+
+.form-content form input {
+  padding: 0 15px;
+  border: 1px solid #caca;
+}
+
+.form-content form .form-link {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-content form .form-link a:hover {
+  text-decoration: underline;
 }

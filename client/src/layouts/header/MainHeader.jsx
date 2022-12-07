@@ -24,7 +24,7 @@ const MainHeader = () => {
         <Link to="cart">
           <FaCartPlus />
         </Link>
-        <Link to="account">
+        <Link to="login">
           <FaUserAlt />
         </Link>
       </div>
