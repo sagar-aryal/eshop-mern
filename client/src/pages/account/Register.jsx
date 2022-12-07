@@ -12,16 +12,24 @@ const Register = () => {
               name="email"
               placeholder="Email"
               autoComplete="off"
+              required
+              autoFocus
             />
           </div>
           <div className="input-field">
-            <input type="password" name="password" placeholder="Password" />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
           </div>
           <div className="input-field">
             <input
               type="password"
               name="confirmpassword"
               placeholder="Confirm Password"
+              required
             />
           </div>
 

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { FaEyeSlash } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -22,6 +23,8 @@ const Login = () => {
               name="email"
               placeholder="Email"
               autoComplete="off"
+              required
+              autoFocus
             />
           </div>
           <div className="input-field">
@@ -29,6 +32,7 @@ const Login = () => {
               type={passwordShown ? "text" : "password"}
               name="password"
               placeholder="Password"
+              required
             />
             <FaEyeSlash
               onClick={togglePassword}
@@ -52,6 +56,25 @@ const Login = () => {
             <span>
               Don't have an account? <Link to="/register">Register</Link>
             </span>
+          </div>
+          <div className="line">
+            <h2>
+              <span>Or</span>
+            </h2>
+          </div>
+          <div className="btn-field google-login">
+            <button>
+              <FcGoogle
+                style={{
+                  background: "#fff",
+                  height: "25px",
+                  width: "25px",
+                  borderRadius: "50%",
+                  padding: "2px",
+                }}
+              />
+              <span>Login with Google</span>
+            </button>
           </div>
         </form>
       </div>

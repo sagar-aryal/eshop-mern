@@ -150,18 +150,19 @@ nav ul li {
 /* Login and Register Form */
 
 .form-container {
-  max-width: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
   width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .form-content {
   border: 1px solid rgb(219, 214, 214);
   border-radius: 5px;
   padding: 30px;
+  max-width: 480px;
+  width: 100%;
 }
 
 .form-content h1 {
@@ -189,9 +190,15 @@ nav ul li {
 }
 
 .form-content form input {
+  outline: none;
+  border-radius: 5px;
   font-family: inherit;
   padding: 0 15px;
   border: 1px solid #caca;
+}
+
+.form-content form input:focus {
+  border-bottom-width: 2px;
 }
 
 .form-content form button {
@@ -213,7 +220,36 @@ nav ul li {
   text-align: center;
   margin-top: 20px;
 }
+.form-content form .form-link a {
+  opacity: 0.9;
+}
 
 .form-content form .form-link a:hover {
   text-decoration: underline;
+}
+
+.form-content form .line h2 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #caca;
+  line-height: 0.1em;
+  margin: 20px 0;
+}
+
+.form-content form .line h2 span {
+  background: #fff;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.google-login button {
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-login button span {
+  margin-left: 10px;
+  color: inherit;
 }
