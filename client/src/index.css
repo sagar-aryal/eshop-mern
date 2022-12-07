@@ -189,10 +189,24 @@ nav ul li {
 }
 
 .form-content form input {
+  font-family: inherit;
   padding: 0 15px;
   border: 1px solid #caca;
 }
 
+.form-content form button {
+  background: rgb(7, 79, 213);
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+}
+
+.form-content form button:hover {
+  background: rgba(7, 79, 213, 0.7);
+}
 .form-content form .form-link {
   font-size: 14px;
   font-weight: 500;

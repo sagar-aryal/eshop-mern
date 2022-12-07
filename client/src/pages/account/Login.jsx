@@ -1,7 +1,16 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
 import { FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
+  const [passwordShown, setPasswordShown] = useState(false);
+
+  // Password toggle handler
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  };
+
   return (
     <div className="form-container">
       <div className="form-content">
@@ -16,8 +25,13 @@ const Login = () => {
             />
           </div>
           <div className="input-field">
-            <input type="password" name="password" placeholder="Password" />
+            <input
+              type={passwordShown ? "text" : "password"}
+              name="password"
+              placeholder="Password"
+            />
             <FaEyeSlash
+              onClick={togglePassword}
               style={{
                 position: "absolute",
                 top: "50%",

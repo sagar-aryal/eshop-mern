@@ -26,7 +26,7 @@ const Register = () => {
           </div>
 
           <div className="btn-field">
-            <button>Login</button>
+            <button>Register</button>
           </div>
           <div className="form-link">
             <span>
