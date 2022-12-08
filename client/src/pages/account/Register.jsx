@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 import { toast } from "react-toastify";
 
@@ -13,17 +14,39 @@ const initialInputValues = {
 const Register = () => {
   const [inputValues, setInputValues] = useState(initialInputValues);
 
+  const navigate = useNavigate();
+
+  const registerUser = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/v1/user/register",
+        inputValues,
+        {
+          headers: {
+            "content-type": "application/json",
+          },
+        }
+      );
+      const data = await response.data;
+      return data;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const handleChange = (event) => {
-    setInputValues((prev) => {
-      return { ...prev, [event.target.name]: event.target.value };
-    });
+    setInputValues((prev) => ({
+      ...prev,
+      [event.target.name]: event.target.value,
+    }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(inputValues);
+    registerUser();
     toast.success("Registered Successfully");
     setInputValues(initialInputValues);
+    navigate("/login");
   };
 
   return (

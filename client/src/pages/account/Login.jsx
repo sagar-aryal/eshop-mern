@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 import { FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
@@ -14,17 +15,39 @@ const Login = () => {
   const [inputValues, setInputValues] = useState(initialInputValues);
   const [passwordShown, setPasswordShown] = useState(false);
 
+  const navigate = useNavigate();
+
+  const loginUser = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/v1/user/login",
+        inputValues,
+        {
+          headers: {
+            "content-type": "application/json",
+          },
+        }
+      );
+      const data = await response.data;
+      return data;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const handleChange = (event) => {
-    setInputValues((prev) => {
-      return { ...prev, [event.target.name]: event.target.value };
-    });
+    setInputValues((prev) => ({
+      ...prev,
+      [event.target.name]: event.target.value,
+    }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(inputValues);
+    loginUser();
     toast.success("Logged in Successfully");
     setInputValues(initialInputValues);
+    navigate("/user");
   };
 
   // Password toggle handler

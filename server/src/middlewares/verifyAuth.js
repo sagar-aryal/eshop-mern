@@ -4,9 +4,7 @@ const { JWT_SECRET_KEY } = require("../config/secrets");
 
 const verifyAuth = (req, res, next) => {
   /* const headers = req.headers["authorization"];
-
   const token = headers.split(" ")[1];
-
   */
 
   const cookie = req.headers.cookie;

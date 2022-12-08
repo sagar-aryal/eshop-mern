@@ -14,8 +14,8 @@ const registerUser = async (req, res, next) => {
       .status(400)
       .json({ message: "User already exists, Please login" });
   }
-
-  const hashedPassword = bcrypt.hashSync(password);
+  const salt = bcrypt.genSaltSync(10);
+  const hashedPassword = bcrypt.hashSync(password, salt);
 
   const user = new User({
     firstname,
