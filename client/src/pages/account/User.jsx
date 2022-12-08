@@ -5,7 +5,7 @@ import { useEffect } from "react";
 axios.defaults.withCredentials = true;
 
 const User = () => {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState();
 
   const getUser = async () => {
     try {
@@ -16,15 +16,14 @@ const User = () => {
         }
       );
       const data = await response.data;
-      console.log(data);
-      return data;
+      setUser((prev) => ({ ...prev, data }));
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    getUser().then((data) => setUser((prev) => ({ ...prev, data })));
+    getUser();
   }, []);
 
   return <div>{user && <h1>Welcome {user.firstname}</h1>}</div>;
