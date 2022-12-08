@@ -16,13 +16,13 @@ const verifyAuth = (req, res, next) => {
   const token = cookie.split("=")[1];
 
   if (!token) {
-    return res.status(400).json({ message: "No token found" });
+    return res.status(400).json({ message: "Invalid token" });
   }
 
   const verify = jwt.verify(token, JWT_SECRET_KEY);
 
   if (!verify) {
-    return res.status(400).json({ message: "Invalid token" });
+    return res.status(400).json({ message: "Authentication failed" });
   }
   req.id = verify.id;
   next();
