@@ -1,4 +1,5 @@
 const express = require("express");
+const cookieParser = require("cookie-parser");
 
 const { PORT } = require("./config/secrets");
 const mongooseConnectDB = require("./config/database");
@@ -9,6 +10,7 @@ const app = express();
 // global middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 // database connection
 mongooseConnectDB();
