@@ -194,7 +194,8 @@ nav ul li {
 }
 
 .form-content form .input-field,
-.form-content form .btn-field {
+.form-content form .btn-field,
+.google-login-btn {
   height: 45px;
   width: 100%;
   margin-top: 20px;
@@ -202,7 +203,8 @@ nav ul li {
 }
 
 .form-content form input,
-.form-content form button {
+.form-content form button,
+.google-login-btn button {
   height: 100%;
   width: 100%;
 }
@@ -219,7 +221,8 @@ nav ul li {
   border-bottom-width: 2px;
 }
 
-.form-content form button {
+.form-content form button,
+.google-login-btn button {
   background: rgb(51, 89, 159);
   border-radius: 5px;
   cursor: pointer;
@@ -229,24 +232,27 @@ nav ul li {
   font-family: inherit;
 }
 
-.form-content form button:hover {
+.form-content form button:hover,
+.google-login-btn button:hover {
   background: rgba(51, 89, 159, 0.7);
 }
-.form-content form .form-link {
+
+.form-content .form-link {
   font-size: 14px;
   font-weight: 500;
   text-align: center;
   margin-top: 20px;
 }
-.form-content form .form-link a {
+
+.form-content .form-link a {
   opacity: 0.9;
 }
 
-.form-content form .form-link a:hover {
+.form-content .form-link a:hover {
   text-decoration: underline;
 }
 
-.form-content form .line h2 {
+.form-content .line h2 {
   width: 100%;
   text-align: center;
   border-bottom: 1px solid #caca;
@@ -254,19 +260,19 @@ nav ul li {
   margin: 20px 0;
 }
 
-.form-content form .line h2 span {
+.form-content .line h2 span {
   background: #fff;
   padding: 0 10px;
   font-size: 14px;
 }
 
-.google-login button {
+.google-login-btn button {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.google-login button span {
+.google-login-btn button span {
   margin-left: 10px;
   color: inherit;
 }

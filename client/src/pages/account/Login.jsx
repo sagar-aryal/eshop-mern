@@ -59,6 +59,7 @@ const Login = () => {
     <div className="form-container">
       <div className="form-content">
         <h1>Login</h1>
+
         <form onSubmit={handleSubmit}>
           <div className="input-field">
             <input
@@ -99,31 +100,32 @@ const Login = () => {
           <div className="btn-field">
             <button type="submit">Login</button>
           </div>
-          <div className="form-link">
-            <span>
-              Don't have an account? <Link to="/register">Register</Link>
-            </span>
-          </div>
-          <div className="line">
-            <h2>
-              <span>Or</span>
-            </h2>
-          </div>
-          <div className="btn-field google-login">
-            <button>
-              <FcGoogle
-                style={{
-                  background: "#fff",
-                  height: "25px",
-                  width: "25px",
-                  borderRadius: "50%",
-                  padding: "2px",
-                }}
-              />
-              <span>Login with Google</span>
-            </button>
-          </div>
         </form>
+
+        <div className="form-link">
+          <span>
+            Don't have an account? <Link to="/register">Register</Link>
+          </span>
+        </div>
+        <div className="line">
+          <h2>
+            <span>Or</span>
+          </h2>
+        </div>
+        <div className="google-login-btn">
+          <button>
+            <FcGoogle
+              style={{
+                background: "#fff",
+                height: "25px",
+                width: "25px",
+                borderRadius: "50%",
+                padding: "2px",
+              }}
+            />
+            <span>Login with Google</span>
+          </button>
+        </div>
       </div>
     </div>
   );
