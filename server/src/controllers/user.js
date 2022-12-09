@@ -53,14 +53,11 @@ const loginUser = async (req, res, next) => {
   }
 
   const token = jwt.sign({ id: isUserExit._id }, JWT_SECRET_KEY, {
-    expiresIn: "30s",
+    expiresIn: "1m",
   });
 
   res.cookie(isUserExit._id, token, {
-    path: "/",
-    expires: new Date(Date.now() + 1000 * 30), // 30s
     httpOnly: true,
-    sameSite: "lax",
   });
 
   return res.status(200).json({
