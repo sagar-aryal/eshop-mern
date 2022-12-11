@@ -22,11 +22,12 @@ const User = () => {
     }
   };
 
+  console.log(user);
   useEffect(() => {
     getUser();
   }, []);
 
-  return <div>{user && <h1>Welcome {user.firstname}</h1>}</div>;
+  return <div>{user && <h1>Welcome {user.data.user.firstname}</h1>}</div>;
 };
 
 export default User;

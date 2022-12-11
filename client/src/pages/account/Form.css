@@ -1,0 +1,110 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+}
+
+.form-content {
+  border: 1px solid rgb(219, 214, 214);
+  border-radius: 5px;
+  padding: 30px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.form-content h1 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-content form {
+  margin-top: 30px;
+}
+
+.form-content form .input-field,
+.form-content form .btn-field,
+.google-login-btn {
+  height: 45px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+.form-content form input,
+.form-content form button,
+.google-login-btn button {
+  height: 100%;
+  width: 100%;
+}
+
+.form-content form input {
+  outline: none;
+  border-radius: 5px;
+  font-family: inherit;
+  padding: 0 15px;
+  border: 1px solid #caca;
+}
+
+.form-content form input:focus {
+  border-bottom-width: 2px;
+}
+
+.form-content form button,
+.google-login-btn button {
+  background: rgb(51, 89, 159);
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+}
+
+.form-content form button:hover,
+.google-login-btn button:hover {
+  background: rgba(51, 89, 159, 0.7);
+}
+
+.form-content .form-link {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-content .form-link a {
+  opacity: 0.9;
+}
+
+.form-content .form-link a:hover {
+  text-decoration: underline;
+}
+
+.form-content .line h2 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #caca;
+  line-height: 0.1em;
+  margin: 20px 0;
+}
+
+.form-content .line h2 span {
+  background: #fff;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.google-login-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.google-login-btn button span {
+  margin-left: 10px;
+  color: inherit;
+}

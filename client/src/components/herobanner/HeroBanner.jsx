@@ -1,3 +1,5 @@
+import "./HeroBanner.css";
+
 import herobanner from "../../images/herobanner.avif";
 
 const HeroBanner = () => {

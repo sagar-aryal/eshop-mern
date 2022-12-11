@@ -52,18 +52,22 @@ const loginUser = async (req, res, next) => {
     return res.status(400).json({ message: "Invalid Credientials" });
   }
 
-  const token = jwt.sign({ id: isUserExit._id }, JWT_SECRET_KEY, {
-    expiresIn: "1m",
+  const refreshToken = jwt.sign({ id: isUserExit._id }, JWT_SECRET_KEY, {
+    expiresIn: "1h",
   });
 
-  res.cookie(isUserExit._id, token, {
+  // Assigning refresh token in http-only cookie
+  res.cookie("jwt", refreshToken, {
     httpOnly: true,
+    sameSite: "None",
+    secure: true,
+    maxAge: 24 * 60 * 60 * 1000,
   });
 
   return res.status(200).json({
     message: "User logged in successfully",
     email: isUserExit.email,
-    token,
+    refreshToken,
   });
 };
 

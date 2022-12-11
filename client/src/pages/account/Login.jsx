@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+import "./Form.css";
 import { FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
@@ -22,9 +23,11 @@ const Login = () => {
       const response = await axios.post(
         "http://localhost:5000/api/v1/user/login",
         inputValues,
+
         {
           headers: {
             "content-type": "application/json",
+            withCredentials: true,
           },
         }
       );

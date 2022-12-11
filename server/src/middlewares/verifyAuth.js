@@ -7,13 +7,13 @@ const verifyAuth = (req, res, next) => {
   const token = headers.split(" ")[1];
   */
 
-  const cookie = req.headers.cookie;
+  const cookies = req.headers.cookie;
 
-  if (!cookie) {
+  if (!cookies) {
     return res.status(400).json({ message: "Cookie expires" });
   }
 
-  const token = cookie.split("=")[1];
+  const token = cookies.split("=")[1];
 
   if (!token) {
     return res.status(400).json({ message: "Invalid token" });
