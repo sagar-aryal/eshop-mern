@@ -1,9 +1,11 @@
-import HeroBanner from "../../components/herobanner/HeroBanner";
+import HeroBanner from "../../layouts/herobanner/HeroBanner";
+import Carousel from "../../layouts/carousel/Carousel";
 
 const Home = () => {
   return (
     <div>
       <HeroBanner />
+      <Carousel />
     </div>
   );
 };
