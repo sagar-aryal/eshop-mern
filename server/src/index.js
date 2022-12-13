@@ -4,7 +4,9 @@ const cors = require("cors");
 
 const { PORT } = require("./config/secrets");
 const mongooseConnectDB = require("./config/database");
+
 const userRouter = require("./routes/user");
+const categoryRouter = require("./routes/category");
 
 const app = express();
 
@@ -19,6 +21,7 @@ mongooseConnectDB();
 
 // routers
 app.use("/api/v1/user", userRouter);
+app.use("/api/v1/category", categoryRouter);
 
 // server listener
 app.listen(PORT || 8000, () => {
