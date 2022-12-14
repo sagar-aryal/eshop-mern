@@ -1,4 +1,10 @@
+import { useContext } from "react";
+import { CategoryContext } from "../../context/categoryContext";
+
 const AllCategories = () => {
+  const { categories, activeCategory, handleCategoryChange } =
+    useContext(CategoryContext);
+
   return (
     <div className="categories">
       <select name="categories">
